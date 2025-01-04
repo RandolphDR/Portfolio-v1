@@ -1,0 +1,231 @@
+@import url("global.css");
+
+.Navigationbar,
+.Navigation-Brand,
+.Logo,
+.Navigation-Menu-Group,
+.Navigation-Menu,
+.Navigation-Menu a,
+.Navigation-Resume {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navigationbar {
+  position: fixed;
+  justify-content: space-between;
+  width: clamp(18.75rem, 80%, 90rem);
+  height: 4.375rem;
+  background-color: rgba(4, 30, 66, 0.8);
+  backdrop-filter: blur(0.5rem);
+  border-radius: 2.5rem;
+  padding: 0.875rem 1rem 0.875rem 1rem;
+  transition: 0.3s all ease;
+  z-index: 1;
+  margin-top: 1rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0);
+}
+
+
+.Navigationbar:hover {
+  border: 0.0625rem solid #1d428a;
+}
+
+.Navigation-Brand {
+  width: 10%;
+  height: 3.5rem;
+  z-index: 1;
+}
+
+.Logo {
+  width: 5.625rem;
+  height: 3.5rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.Logo img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s all ease;
+  width: 5.625rem;
+}
+
+.Logo img:hover {
+  transform: scale(1.1);
+}
+
+.Logo img:active {
+  pointer-events: none;
+}
+
+.Navigation-Toggle {
+  width: 1.875rem;
+  height: 2.1875rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: none;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.Navigation-Toggle div {
+  width: 1.875rem;
+  height: 0.25rem;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-0.3125rem, 0.556rem);
+}
+.toggle .line2 {
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-0.3125rem, -0.556rem);
+}
+
+.Navigation-Menu-Group {
+  width: 80%;
+  height: 3.5rem;
+  justify-content: space-between;
+}
+
+.Navigation-Menu {
+  width: 70%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.Navigation-Menu a {
+  width: 5.625rem;
+  height: 2.1875rem;
+  font-size: var(--navbar-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--navbar-font-weight);
+  color: var(--white);
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: 0.3s all ease;
+  user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.Navigation-Menu a:hover {
+  text-shadow: 0 0 10px cyan, 0 0 40px #64ffda;
+}
+
+.nav-active {
+  background: var(--pantoneblue) !important;
+  border-radius: 2rem;
+  rotate: 5deg !important;
+  text-shadow: none !important;
+}
+
+.Navigation-Menu a:nth-child(5) {
+  display: none;
+  border-radius: 0.3125rem;
+  background: var(--pantoneblue);
+}
+
+.Navigation-Resume {
+  width: 5.625rem;
+  height: 2.1875rem;
+  font-size: var(--navbar-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--navbar-font-weight);
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.3s all ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-radius: 0.3125rem;
+  border-radius: 2rem;
+   user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.Navigation-Resume:hover {
+  background: var(--pantoneblue);
+}
+
+@media (width <= 64rem) {
+  .Navigation-Menu a:nth-child(5) {
+    display: flex;
+  }
+  .Navigationbar {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 3.75rem;
+    border-radius: 2rem;
+    padding: 0.1875rem 0.875rem;
+  }
+
+  .Drop-Navigation {
+    height: clamp(26rem, 80vh, 32.25rem);
+  }
+
+  .Navigation-Brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .Navigation-Toggle {
+    display: flex;
+  }
+
+  .Navigation-Menu-Group {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .Navigation-Menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .Navigation-Menu a {
+    opacity: 0;
+  }
+
+  #Navigation-Home {
+    animation: 1s fade_in_down 0.1s both;
+  }
+  #Navigation-About {
+    animation: 1.2s fade_in_down 0.1s both;
+  }
+  #Navigation-Projects {
+    animation: 1.4s fade_in_down 0.1s both;
+  }
+  #Navigation-Contacts {
+    animation: 1.6s fade_in_down 0.1s both;
+  }
+  #Navigation-Resume {
+    animation: 1.8s fade_in_down 0.1s both;
+  }
+
+  .Drop-Navigation-Menu {
+    display: flex;
+  }
+
+  .Show-Menu {
+    opacity: 1;
+  }
+
+  .Navigation-Resume {
+    display: none;
+  }
+}

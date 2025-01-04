@@ -1,0 +1,29 @@
+@import url("global.css");
+@import url("modals.css");
+@import url("navbar.css");
+@import url("home.css");
+@import url("about.css");
+@import url("projects.css");
+@import url("contacts.css");
+@import url("footer.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--royalblue) transparent;
+}
+
+html {
+  background: var(--darkblue);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--website-background) no-repeat center / cover;
+}

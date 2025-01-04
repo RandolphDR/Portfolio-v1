@@ -1,0 +1,153 @@
+@import url("global.css");
+
+.Home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: clamp(18.75rem, 85%, 81.25rem);
+  height: clamp(50rem, 100vh, 100vh);
+  gap: 1.5rem;
+}
+
+.Home-Information {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.Home-Information span {
+  width: fit-content;
+}
+
+.Home-Information span h4,
+.Home-Information p {
+  color: var(--white);
+  font-weight: var(--description-font-weight);
+}
+
+.Home-Information span h4 {
+  font-size: var(--label-font-size);
+  font-family: var(--label-font);
+  font-weight: var(--label-font-weight);
+  color: var(--darkgray);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.125rem solid;
+  animation: Typing_Animation 5s steps(21) infinite, Blinking_Carret 1s step-end infinite;
+}
+
+.Home-Information span h1 {
+  color: var(--white);
+  font-size: var(--my-name-font-size);
+  font-family: var(--header-font);
+  font-weight: var(--header-font-weight);
+}
+
+.Home-Information p {
+  color: var(--darkgray);
+  font-size: var(--description-font-size);
+  font-family: var(--description-font);
+  line-height: var(--description-line-height);
+  border-left: 0.125rem solid var(--darkgray);
+  padding: 0 1rem;
+}
+
+.Home-Profile,
+.Profile-Frame,
+.Profile-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-Profile {
+  width: 50%;
+  height: 70%;
+}
+
+.Profile-Frame {
+  width: 100%;
+  height: clamp(20rem, 100%, 31.25rem);
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.Profile-Container {
+  align-items: flex-end;
+  width: 31.25rem;
+  height: 28.125rem;
+  margin-bottom: -5rem;
+  text-decoration: none;
+  transition: 0.2s all ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-radius: 41% 59% 71% 29% / 30% 42% 58% 70%;
+  background: radial-gradient(circle, rgba(107, 37, 255, 1) 0%, rgba(119, 66, 233, 1) 25%, rgba(194, 165, 255, 1) 75%);
+}
+
+.Profile-Container:hover {
+  transform: scale(1.03);
+  background: radial-gradient(circle, rgba(51, 2, 154, 1) 0%, rgba(80, 50, 143, 1) 25%, rgba(120, 64, 238, 1) 75%);
+}
+
+.Profile-Container img {
+  height: 40.625rem;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  filter: drop-shadow(5px 5px 8px #000000);
+}
+
+@media (width <=64rem) {
+  .Home {
+    padding-top: 5.7rem;
+    flex-direction: column-reverse;
+  }
+
+  .Home-Profile {
+    width: 100%;
+    height: 45%;
+    align-items: flex-end;
+  }
+
+  .Home-Information {
+    width: 100%;
+    height: 55%;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .Home-Information p {
+    border-right: 0.125rem solid var(--darkgray);
+  }
+
+  .Profile-Container {
+    width: 25rem;
+    height: 18.75rem;
+  }
+
+  .Profile-Container img {
+    height: 28.125rem;
+  }
+}
+
+@media (width <=28.125rem) {
+  .Home {
+    padding-top: 0;
+  }
+
+  .Profile-Container {
+    width: 15.625rem;
+    height: 14.375rem;
+  }
+
+  .Profile-Container img {
+    height: 21.875rem;
+  }
+}

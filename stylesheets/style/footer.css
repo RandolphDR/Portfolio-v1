@@ -1,0 +1,97 @@
+@import url("global.css");
+
+.Footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: clamp(18.75rem, 90%, 90rem);
+  height: clamp(150px, 20vh, 13.125rem);
+  padding: 0 0 0.2rem 0;
+}
+
+.Footer hr,
+.Footer main {
+  width: 100%;
+}
+
+.Footer hr {
+  border-color: var(--pantone-blue);
+}
+
+.Footer main,
+.Footer-Links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Footer-Links {
+  width: clamp(18.75rem, 25vw, 31.25rem);
+}
+
+.Footer-Links a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+  font-size: var(--footer-navbar-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--description-font-weight);
+  color: var(--white);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.Footer-Links a:hover {
+  color: rgb(178, 102, 255);
+  transform: scale(1.1);
+}
+
+.Developer-Tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.Developer-Tags p,
+.Developer-Tags p button {
+  font-size: var(--footer-button-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--description-font-weight);
+  color: var(--darkgray);
+}
+
+.Developer-Tags p:nth-child(2) {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Developer-Tags p button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.Developer-Tags p button:hover {
+  color: rgb(178, 102, 255);
+  text-decoration: underline;
+}
+
+@media (width <= 28.125rem) {
+  .Footer main {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80%;
+  }
+
+  .Footer-Links {
+    height: 50%;
+  }
+}

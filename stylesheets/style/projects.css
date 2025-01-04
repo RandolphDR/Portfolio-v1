@@ -1,0 +1,247 @@
+@import url("global.css");
+
+.Projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: clamp(18.75rem, 85%, 81.25rem);
+  height: clamp(96rem, 200vh, 112.5rem);
+  gap: 2rem;
+}
+
+.Projects-Main-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Projects-Main-Header h1 {
+  color: var(--white);
+  font-size: var(--header-font-size);
+  font-family: var(--header-font);
+  font-weight: var(--header-font-weight);
+}
+
+.Project-Featured {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Project-Featured:nth-of-type(odd) {
+  flex-direction: row;
+}
+
+.Project-Featured:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.Project-Featured figure,
+.Project-Featured article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Project-Featured figure {
+  width: 60%;
+}
+
+.Project-Featured figure a {
+  filter: grayscale(50%);
+  filter: brightness(0.6) contrast(1);
+  transition: 0.5s all ease;
+}
+
+.Project-Featured figure a:hover {
+  filter: none;
+}
+
+.Project-Featured article {
+  gap: 1rem;
+  width: clamp(600px, 40%, 40%);
+  z-index: 0;
+}
+
+.Project-Featured:nth-of-type(even) article {
+  align-items: flex-start;
+}
+
+.Project-Featured:nth-of-type(odd) article {
+  align-items: flex-end;
+}
+
+.Project-Heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.Project-Featured:nth-of-type(odd) article div:nth-child(1) {
+  align-items: flex-end;
+  text-align: end;
+}
+
+.Project-Featured:nth-of-type(even) article div:nth-child(1) {
+  align-items: flex-start;
+  text-align: start;
+}
+
+.Project-Heading p {
+  font-size: var(--description-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--description-font-weight);
+  line-height: var(--description-line-height);
+  color: var(--lightgreen);
+}
+
+.Project-Heading h2 {
+  font-size: var(--header-font-size);
+  font-family: var(--header-font);
+  font-weight: var(--header-font-weight);
+  color: var(--white);
+}
+
+.Project-Description {
+  background: var(--navigationbar-background);
+  background: rgb(4, 30, 66, 0.95);
+  width: 120%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.Project-Description p {
+  font-size: var(--description-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--description-font-weight);
+  line-height: var(--description-line-height);
+  color: var(--darkgray);
+}
+
+.Project-Featured:nth-of-type(odd) article div:nth-child(2) p {
+  text-align: end;
+}
+
+.Project-Featured:nth-of-type(even) article div:nth-child(2) p {
+  text-align: start;
+}
+
+.Project-Language-Used {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+
+.Project-Featured:nth-of-type(odd) article div:nth-child(3) {
+  justify-content: flex-end;
+}
+
+.Project-Featured:nth-of-type(even) article div:nth-child(3) {
+  justify-content: flex-start;
+}
+
+.Project-Language-Used p {
+  font-size: var(--description-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--description-font-weight);
+  line-height: var(--description-line-height);
+  color: var(--white);
+}
+
+.Project-Navigation {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5%;
+}
+
+.Project-Featured:nth-of-type(odd) article nav {
+  justify-content: flex-end;
+}
+
+.Project-Featured:nth-of-type(even) article nav {
+  justify-content: flex-start;
+}
+
+.Project-Navigation a {
+  width: 25px;
+}
+
+/* 1024px */
+@media (width <=64rem) {
+  .Project-Featured figure {
+    display: none;
+  }
+
+  .Project-Featured article {
+    position: relative;
+    width: 100%;
+  }
+
+  .Project-Featured:nth-of-type(even) article,
+  .Project-Featured:nth-of-type(odd) article,
+  .Project-Featured:nth-of-type(odd) article div:nth-child(1),
+  .Project-Featured:nth-of-type(even) article div:nth-child(1),
+  .Project-Featured:nth-of-type(odd) article div:nth-child(2) p,
+  .Project-Featured:nth-of-type(even) article div:nth-child(2) p,
+  .Project-Featured:nth-of-type(odd) article div:nth-child(3),
+  .Project-Featured:nth-of-type(even) article div:nth-child(3),
+  .Project-Featured:nth-of-type(even) article nav,
+  .Project-Featured:nth-of-type(odd) article nav {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Project-Featured article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+  }
+
+  .Project-Description {
+    width: 100%;
+    background: none;
+    height: fit-content;
+  }
+
+  .Project-Featured:nth-child(2) article::before {
+    background-image: linear-gradient(rgba(4, 30, 66, 0.93), rgba(4, 30, 66, 0.93)), url('../../assets/arts/projects/My_Portfolio_Website.png');
+  }
+
+  .Project-Featured:nth-child(3) article::before {
+    background-image: linear-gradient(rgba(4, 30, 66, 0.93), rgba(4, 30, 66, 0.93)), url('../../assets/arts/projects/Clinic_Management_System.png');
+  }
+
+  .Project-Featured:nth-child(4) article::before {
+    background-image: linear-gradient(rgba(4, 30, 66, 0.93), rgba(4, 30, 66, 0.93)), url('../../assets/arts/projects/Enrollment_System.png');
+  }
+}
+
+@media (width <=28.125rem) {
+  .Project-Language-Used {
+    padding: 0 1rem;
+  }
+}

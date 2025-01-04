@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --darkblue: #00008b;
+  --pantoneblue: #0018a8;
+  --royalblue: #6f00ff;
+  --darkgray: #a9a9a9;
+  --lightgreen: #90EE90;
+  --navigationbar-background: #041e42;
+  --navbar-font-weight: 500;
+  --website-background: linear-gradient(to right, var(--black), #18002e, var(--darkblue));
+  --header-font: "DM Sans", sans-serif;
+  --header-font-weight: 700;
+  --label-font: "Open Sans", sans-serif;
+  --label-font-weight: 400;
+  --description-font: "Fredoka", sans-serif;
+  --description-font-weight: 400;
+}
+
+@media (width >=64rem) {
+  :root {
+    --navbar-font-size: 1.1rem;
+    --my-name-font-size: 5rem;
+    --header-font-size: 2rem;
+    --label-font-size: 2rem;
+    --description-font-size: 1rem;
+    --description-line-height: 1.5rem;
+    --footer-navbar-font-size: 1.1rem;
+    --footer-button-font-size: 0.8rem;
+    --contact-header-font-size: 3rem;
+    --contact-description-font-size: 1.2rem;
+  }
+}
+
+@media (width <=64rem) {
+  :root {
+    --navbar-font-size: 1rem;
+    --my-name-font-size: 4rem;
+    --header-font-size: 1.5rem;
+    --label-font-size: 2rem;
+    --description-font-size: 1rem;
+    --description-line-height: 1.1rem;
+    --footer-navbar-font-size: 0.9rem;
+    --footer-button-font-size: 0.6rem;
+    --contact-header-font-size: 2.5rem;
+  }
+}
+
+@media (width <=28.125rem) {
+  :root {
+    --navbar-font-size: 1rem;
+    --my-name-font-size: 3rem;
+    --header-font-size: 1.5rem;
+    --label-font-size: 1.3rem;
+    --description-font-size: 0.8rem;
+    --footer-navbar-font-size: 0.8rem;
+    --footer-button-font-size: 0.5rem;
+    --contact-header-font-size: 2.5rem;
+  }
+}
+
+@keyframes fade_in_down {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav_hover_effect {
+  from {
+    background-color: #d400ff;
+    color: white !important;
+    border-radius: 15px;
+    rotate: 0deg;
+  }
+
+  to {
+    background-color: #d400ff;
+    color: white !important;
+    border-radius: 15px;
+    rotate: 365deg;
+  }
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes down-fadein {
+  from {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes Typing_Animation {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  75% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes Blinking_Carret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes breathing {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(107, 37, 255, 0.8), 0 10px 10px rgba(0, 102, 255, 0.4), 0 10 10px 0px rgba(0, 102, 255, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 0 0 rgba(119, 66, 233, 1), 0 0 40px 20px rgba(0, 102, 255, 0.6), 0 0 80px 80px rgba(0, 102, 255, 0.3);
+  }
+}

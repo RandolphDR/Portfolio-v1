@@ -1,0 +1,56 @@
+@import url("global.css");
+
+.Contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: clamp(18.75rem, 85%, 81.25rem);
+  height: clamp(50rem, 100vh, 100vh);
+  gap: 3rem;
+}
+
+.Contacts-Article {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.Contacts-Article h1 {
+  color: var(--white);
+  font-size: var(--contact-header-font-size);
+  font-family: var(--header-font);
+  font-weight: var(--header-font-weight);
+  text-align: center;
+}
+
+.Contacts-Article p {
+  color: var(--darkgray);
+  font-size: var(--contact-description-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--description-font-weight);
+  text-align: center;
+}
+
+.Contacts a, .Contacts a:active {
+  text-decoration: none;
+  color: var(--lightgreen);
+  font-size: var(--contact-description-font-size);
+  font-family: var(--description-font);
+  font-weight: var(--description-font-weight);
+  border-radius: 0.5rem;
+  border: 1px solid var(--lightgreen);
+  padding: 1rem 1.5rem;
+  transition: 0.3s all ease;
+}
+
+.Contacts a:hover {
+  border-color: var(--white);
+  color: var(--white);
+  scale: 1.1;
+}
